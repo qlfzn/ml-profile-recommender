@@ -48,8 +48,6 @@ class DBHandler:
             parsed_data = json.loads(data)
             parsed_data = parsed_data["matches"]
 
-            print("Parsed data: ", parsed_data)
-
             response = self.supabase.from_('project_matches').insert(parsed_data).execute()
             return response
         except Exception as e:
