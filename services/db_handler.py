@@ -32,7 +32,7 @@ class DBHandler:
         Get all freelancers profile.
         """
         response = self.supabase.from_('freelancers').select(
-        'id, bio, skills, title, hourly_rate, availability, experience_level, users(name)'
+            'id, bio, skills, title, hourly_rate, availability, experience_level, users(name)'
         ) \
         .execute()
         return response.data
