@@ -1,6 +1,6 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-class buil:
+class TextFeatureExtractor:
     def __init__(self):
         # Initialize vectorizers for different text components
         self.description_vectorizer = TfidfVectorizer(
@@ -11,7 +11,7 @@ class buil:
         
         # Skill extraction and matching tools
         self.skill_vectorizer = TfidfVectorizer(
-            binary=True,  # Just presence/absence for skills
+            binary=True,  
             lowercase=True,
             token_pattern=r'(?u)\b[A-Za-z0-9+#]+\b'
         )
